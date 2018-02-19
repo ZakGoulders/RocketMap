@@ -86,7 +86,7 @@ This includes the installation of Apache as well as the configs needed.
 7) On line 504, it should say #Include conf/extra/httpd-vhosts.conf but it needs to say Include conf/extra/rocketmap.conf and save it.
 
 8) Go to the extra folder and make a new file called rocketmap.conf and paste this into it replacing yourdomain.com with your relevant info.
-   ```
+```
 <VirtualHost *:80>
 
     ServerName yourdomain.com
@@ -101,7 +101,7 @@ This includes the installation of Apache as well as the configs needed.
     CustomLog logs/access.log combined
 
 </VirtualHost>
-   ```
+ ```
 9) Now open cmd and run httpd -S and it should give you some information like ServerRoot and Main DocumentRoot. In the same cmd window, type httpd.exe -k install and it should install Apache.
 
 10) In your RM config, comment out your port and host (this is because default is 127.0.0.1:5000 so it will redirect that to your website name).
